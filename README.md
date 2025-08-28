@@ -20,7 +20,6 @@ const conferencePatterns = [
     // ...
 ];
 
-// 期刊名称映射规则
 const journalPatterns = [
     // ACM TOG
     { pattern: /ACM Transactions on Graphics|ACM TOG|ACM Trans. Graph./i, abbrev: "ACM TOG" },
