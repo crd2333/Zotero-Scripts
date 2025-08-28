@@ -13,6 +13,20 @@ This action use the `url` of an item to fetch the arXiv submission date and vers
 This action classifies items into journals or conferences based on their metadata, such as `publicationTitle`, `proceedingsTitle`, `conferenceName`, etc. It adds appropriate tags like `#NeurIPS 2020` or `#CVPR 2022` to the items. Of course, it may not cover all cases, and you can add more tags as needed.
 
 这个脚本根据 Zotero 项目的元数据（例如会议论文集标题 `proceedingsTitle`、会议名称 `conferenceName`、刊名 `publicationTitle` 等），获取会议或期刊信息及其时间，并添加适当的 `#` 标签，例如 `#NeurIPS 2020`, `#CVPR 2022`。当然可能不全，你可以根据需要自行添加。
+```js
+const conferencePatterns = [
+    // CVPR
+    { pattern: /Computer Vision and Pattern Recognition|CVPR/i, abbrev: "CVPR" },
+    // ...
+];
+
+// 期刊名称映射规则
+const journalPatterns = [
+    // ACM TOG
+    { pattern: /ACM Transactions on Graphics|ACM TOG|ACM Trans. Graph./i, abbrev: "ACM TOG" },
+    // ...
+];
+```
 
 ## 标签清理 (Tag Cleanup)
 This action cleans up tags by removing unnecessary ones, deleting meaningless prefixes (like `Computer Science - `) when importing from `Arxiv`, and replacing certain tags with more appropriate ones based on a predefined dictionary. You can modify the arrays and dictionary as needed.
