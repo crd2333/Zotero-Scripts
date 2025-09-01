@@ -36,3 +36,8 @@ const tagToRemove = [ "a" ];
 const prefixesToClean = [ "Computer Science - " ];
 const tagReplacements = { "a": "b" };
 ```
+
+## Arxiv Fill Abstract
+Occasionally, for unknown reasons, the abstract of an item imported into Zotero may be missing, and this script provides a way to restore it. This action automatically fills the abstract field if it is empty by retrieving the abstract from the corresponding arXiv page using the item's URL.
+
+有时，由于未知原因，导入到 Zotero 中的条目的摘要可能会丢失，这个脚本提供了一种恢复它的方法。这个脚本会自动填充空的摘要字段，通过使用项目的 URL 从相应的 arXiv 页面检索摘要。
